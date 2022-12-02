@@ -1,5 +1,6 @@
 package io.vesion.adventofcode2022
 
+import io.vesion.adventofcode2022.lib.Utils
 import kotlinx.cli.ArgParser
 import kotlinx.cli.ArgType
 import kotlinx.cli.required
@@ -19,10 +20,10 @@ fun main(args: Array<String>) {
     val solution = solutions[day - 1]
 
     val input = if (inputFile == null) {
-        object {}.javaClass.getResource("/example-inputs/day$day.txt")?.readText()
+        Utils.readResource("/example-inputs/day$day.txt")
     } else {
         File(inputFile!!).readText()
-    }!!
+    }
 
     println("---------------")
     println("Day $day")
