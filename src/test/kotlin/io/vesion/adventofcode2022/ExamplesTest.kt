@@ -1,5 +1,6 @@
+package io.vesion.adventofcode2022
+
 import io.vesion.adventofcode2022.lib.Utils
-import io.vesion.adventofcode2022.solutions
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -24,6 +25,6 @@ class ExamplesTest {
     private fun getExpectedSolutions(day: Int) =
         Utils.readResource("/example-solutions.txt")
             .split("\n")[day - 1]
-            .split("   ")
+            .split(" ")
             .map { it.toInt() }
 }
