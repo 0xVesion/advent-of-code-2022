@@ -13,10 +13,10 @@ class ExamplesTest {
             val (expectedOne, expectedTwo) = getExpectedSolutions(day)
 
             val resultOne = solution.solveProblemOne(input)
-            assertEquals(expectedOne, resultOne, "Day $day solution 1")
+            assertEquals(expectedOne, resultOne.toString(), "Day $day solution 1")
 
             val resultTwo = solution.solveProblemTwo(input)
-            assertEquals(expectedTwo, resultTwo, "Day $day solution 2")
+            assertEquals(expectedTwo, resultTwo.toString(), "Day $day solution 2")
         }
     }
 
@@ -26,5 +26,4 @@ class ExamplesTest {
         Utils.readResource("/example-solutions.txt")
             .split("\n")[day - 1]
             .split(" ")
-            .map { it.toInt() }
 }
